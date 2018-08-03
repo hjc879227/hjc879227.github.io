@@ -22,6 +22,7 @@
 		<script>
 			document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';
 		</script><!-- Responsive images -->
+		<script src="js/echarts.min.js"></script>
 	</head>
 	<body>
 		<!--[if lt IE 7]>
@@ -40,59 +41,7 @@
 
 		<section class="gallery">
 
-				<div class="wrapper">
-					<a href="single-image.html">
-						<img class="thumbnail" src="img/placeholder.jpg" alt="thumbnail">
-					</a>
-				</div><!--wrapper-->
-
-				<div class="wrapper">
-					<a href="single-image.html">
-						<img class="thumbnail" src="img/placeholder.jpg" alt="thumbnail">
-					</a>
-				</div><!--wrapper-->
-
-				<div class="wrapper">
-					<a href="single-image.html">
-						<img class="thumbnail" src="img/placeholder.jpg" alt="thumbnail">
-					</a>
-				</div><!--wrapper-->
-
-				<div class="wrapper">
-					<a href="single-image.html">
-						<img class="thumbnail" src="img/placeholder.jpg" alt="thumbnail">
-					</a>
-				</div><!--wrapper-->
-
-				<div class="wrapper">
-					<a href="single-image.html">
-						<img class="thumbnail" src="img/placeholder.jpg" alt="thumbnail">
-					</a>
-				</div><!--wrapper-->
-
-				<div class="wrapper">
-					<a href="single-image.html">
-						<img class="thumbnail" src="img/placeholder.jpg" alt="thumbnail">
-					</a>
-				</div><!--wrapper-->
-
-				<div class="wrapper">
-					<a href="single-image.html">
-						<img class="thumbnail" src="img/placeholder.jpg" alt="thumbnail">
-					</a>
-				</div><!--wrapper-->
-
-				<div class="wrapper">
-					<a href="single-image.html">
-						<img class="thumbnail" src="img/placeholder.jpg" alt="thumbnail">
-					</a>
-				</div><!--wrapper-->
-
-				<div class="wrapper">
-					<a href="single-image.html">
-						<img class="thumbnail" src="img/placeholder.jpg" alt="thumbnail">
-					</a>
-				</div><!--wrapper-->
+				<div id="main" style="width: 100%;height:600px;"></div>
 
 
 		</section><!--works-->
@@ -100,18 +49,271 @@
 		<footer class="site-footer site-footer-font">
 			<div class="sparator"></div>
 			<div class="contact">
-				<a href="mailto:hexocat.themes@gmail.com"><i class="icon-envelope-alt"></i> hexocat.themes@gmail.com</a> &middot;
-				<a href="tel:4213-45-710"><i class="icon-phone"></i> 4213-45-710</a> &middot;
-				<a href="http://www.cssmoban.com/"><i class="icon-twitter"></i> @Mori</a> &middot;
-				<a href="http://www.cssmoban.com/"><i class="icon-facebook-sign"></i> /mori.h</a>
+				<a href="mailto:hjc_1208@126.com"><i class="icon-envelope-alt"></i> hjc_1208@126.com</a>;
 			</div>
-			<div class="copyright">&copy; Copyright &copy; 2013.Company name All rights reserved.<a target="_blank" href="http://www.cssmoban.com/" title="模板之家">模板之家</a> Collect from <a href="http://www.cssmoban.com/" title="网站模板" target="_blank">网站模板</a></div>
+			<div class="copyright">&copy; Copyright &copy; 2018.Junchao Hu All rights reserved.<a target="_blank" href="https://junchaohu.github.io/" title="My stroy">My Story</a> Collect from <a href="http://junchaohu.github.io/" title="My story" target="_blank">Junchao Hu</a></div>
 		</footer>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/jquery-1.8.0.min.js"><\/script>')</script>
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
+		<script type="text/javascript">
+		        // 基于准备好的dom，初始化echarts实例
+		        var myChart = echarts.init(document.getElementById('main'));
+
+		        // 指定图表的配置项和数据
+		        var option = {
+		            title: {
+		                text: 'ECharts 入门示例'
+		            },
+		            tooltip: {},
+		            legend: {
+		                data:['销量']
+		            },
+		            xAxis: {
+		                data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+		            },
+		            yAxis: {},
+		            series: [{
+		                name: '销量',
+		                type: 'bar',
+		                data: [5, 20, 36, 10, 10, 20]
+		            }]
+		        };
+
+		        var params = {
+					"nodes": [
+					{ "id": 0, "category": 0, "name": "LGE CB OP170A", "symbolSize": 50, "value":1},
+				
+					{ "id": 1, "category": 1, "name": "工艺相关", "symbolSize": 40, "value":1 },
+					{ "id": 2, "category": 1, "name": "设备相关", "symbolSize": 40, "value":1 },
+					{ "id": 3, "category": 1, "name": "生产相关", "symbolSize": 40, "value":1 },
+					{ "id": 4, "category": 1, "name": "质量相关", "symbolSize": 40, "value":1 },
+					{ "id": 5, "category": 1, "name": "化学品相关", "symbolSize": 40, "value":1 },
+					{ "id": 6, "category": 1, "name": "环境工况", "symbolSize": 40, "value":1 },
+				
+					{ "id": 7, "category": 2, "name": "清洗", "symbolSize": 30, "value":1 },
+					{ "id": 8, "category": 2, "name": "清洗", "symbolSize": 30, "value":1 },
+					{ "id": 9, "category": 2, "name": "保养时间安排", "symbolSize": 30, "value":1 },
+					{ "id": 10, "category": 2, "name": "故障维修", "symbolSize": 30, "value":1 },
+					{ "id": 11, "category": 2, "name": "节能模式使用", "symbolSize": 30, "value":1 },
+					{ "id": 12, "category": 2, "name": "开动率_高压泵故障_喷嘴堵塞_管路泄漏", "symbolSize": 30, "value":1 },
+					{ "id": 13, "category": 2,  "name": "开动率_高压泵故障", "symbolSize": 30, "value":1 },
+					{ "id": 14, "category": 2,  "name": "开动率_真空泵故障", "symbolSize": 30, "value":1 },
+					{ "id": 15, "category": 2,  "name": "开动率_子工艺循环超时", "symbolSize": 30, "value":1 },
+					{ "id": 16, "category": 2,  "name": "库存数量",  "symbolSize": 30, "value":1 },
+					{ "id": 17, "category": 2,  "name": "休息时间安排", "symbolSize": 30, "value":1 },
+					{ "id": 18, "category": 2,  "name": "早班夜班", "symbolSize": 30, "value":1 },
+					{ "id": 19, "category": 2,  "name": "零件", "symbolSize": 30, "value":1 },
+					{ "id": 20, "category": 2,  "name": "操作人员年限", "symbolSize": 30, "value":1 },
+					{ "id": 21, "category": 2,  "name": "清洗节拍", "symbolSize": 30, "value":1 },
+					{ "id": 22, "category": 2,  "name": "清洗型号", "symbolSize": 30, "value":1 },
+					{ "id": 23, "category": 2,  "name": "生产排班", "symbolSize": 30, "value":1 },
+					{ "id": 24, "category": 2,  "name": "工废_真空效果差生锈", "symbolSize": 30, "value":1 },
+					{ "id": 25, "category": 2,  "name": "工废_清洁度超差", "symbolSize": 30, "value":1 },
+					{ "id": 26, "category": 2,  "name": "工废_工件表面划伤", "symbolSize": 30, "value":1 },
+					{ "id": 27, "category": 2,  "name": "清洗液维护", "symbolSize": 30, "value":1 },
+					{ "id": 28, "category": 2,  "name": "环境温度", "symbolSize": 30, "value":1 },
+				
+					{ "id": 29, "category": 3,  "name": "清洗压力", "symbolSize": 20, "value":1 },
+					{ "id": 30, "category": 3,  "name": "清洗时间", "symbolSize": 20, "value":1 },
+					{ "id": 31, "category": 3,  "name": "清洁度", "symbolSize": 20, "value":1 },
+					{ "id": 32, "category": 3,  "name": "清洗液温度", "symbolSize": 20, "value":1 },
+					{ "id": 33, "category": 3,  "name": "清洗液浓度", "symbolSize": 20, "value":1 },
+					{ "id": 34, "category": 3,  "name": "清洗液PH值", "symbolSize": 20, "value":1 },
+				
+					{ "id": 35, "category": 3,  "name": "清洗液温度", "symbolSize": 20, "value":1 },
+				
+					{ "id": 36, "category": 3,  "name": "高压泵系统转速", "symbolSize": 20, "value":1 },
+				
+					{ "id": 37, "category": 3,  "name": "高压泵振动Pump_Vibrat_1", "symbolSize": 20, "value":1 },
+					
+					{ "id": 38, "category": 3,  "name": "监控真空泵温度VacPum_time_1", "symbolSize": 20, "value":1 },
+					
+					{ "id": 39, "category": 3,  "name": "子工艺循环时间Sub_Process_1", "symbolSize": 20, "value":1 },
+					
+					{ "id": 40, "category": 3,  "name": "库存总数", "symbolSize": 20, "value":1 },
+					{ "id": 41, "category": 3,  "name": "在制品总数", "symbolSize": 20, "value":1 },
+				
+					{ "id": 42, "category": 3,  "name": "交接班时间", "symbolSize": 20, "value":1 },
+					{ "id": 43, "category": 3,  "name": "班内休息时间", "symbolSize": 20, "value":1 },
+					{ "id": 44, "category": 3,  "name": "吃饭时间", "symbolSize": 20, "value":1 },
+				
+					{ "id": 45, "category": 3,  "name": "早班", "symbolSize": 20, "value":1 },
+					{ "id": 46, "category": 3,  "name": "夜班", "symbolSize": 20, "value":1 },
+				
+					{ "id": 47, "category": 3,  "name": "重量", "symbolSize": 20, "value":1 },
+					{ "id": 48, "category": 3,  "name": "体积", "symbolSize": 20, "value":1 },
+					{ "id": 49, "category": 3,  "name": "材质", "symbolSize": 20, "value":1 },
+				
+					{ "id": 50, "category": 3,  "name": "新员工", "symbolSize": 20, "value":1 },
+					{ "id": 51, "category": 3,  "name": "老员工", "symbolSize": 20, "value":1 },
+				
+					{ "id": 52, "category": 3,  "name": "紊流时间", "symbolSize": 20, "value":1 },
+					{ "id": 53, "category": 3,  "name": "高压时间", "symbolSize": 20, "value":1 },
+					{ "id": 54, "category": 3,  "name": "整体时间", "symbolSize": 20, "value":1 },
+				
+					{ "id": 55, "category": 3,  "name": "LTG", "symbolSize": 20, "value":1 },
+					{ "id": 56, "category": 3,  "name": "LCV", "symbolSize": 20, "value":1 },
+					{ "id": 57, "category": 3,  "name": "16LTG", "symbolSize": 20, "value":1 },
+				
+					{ "id": 58, "category": 3,  "name": "换型次数", "symbolSize": 20, "value":1 },
+					{ "id": 59, "category": 3,  "name": "是否换型", "symbolSize": 20, "value":1 },
+					{ "id": 60, "category": 3,  "name": "每班小时数", "symbolSize": 20, "value":1 },
+					{ "id": 61, "category": 3,  "name": "每月总生产班次", "symbolSize": 20, "value":1 },
+				
+					{ "id": 62, "category": 3,  "name": "真空建立时间监控Vacuum_time_1", "symbolSize": 20, "value":1 },
+					
+					{ "id": 63, "category": 3,  "name": "滤袋压差Filte_Dirty_1", "symbolSize": 20, "value":1 },
+					
+					{ "id": 64, "category": 3,  "name": "辊道运行连续时间Roller_time_1", "symbolSize": 20, "value":1 },
+					
+					{ "id": 65, "category": 3,  "name": "换液周期", "symbolSize": 20, "value":1 },
+					{ "id": 66, "category": 3,  "name": "换液时间", "symbolSize": 20, "value":1 },
+					{ "id": 67, "category": 3,  "name": "清洗液循环", "symbolSize": 20, "value":1 },
+					{ "id": 68, "category": 3,  "name": "室外温度", "symbolSize": 20, "value":1 },
+					{ "id": 69, "category": 3,  "name": "室内温度", "symbolSize": 20, "value":1 },
+					{ "id": 70, "category": 3,  "name": "湿度", "symbolSize": 20, "value":1 }
+					],
+					
+					"links": [
+					{ "source": 1, "target": 0 }, 
+					{ "source": 2, "target": 0 }, 
+					{ "source": 3, "target": 0 },
+					{ "source": 4, "target": 0 }, 
+					{ "source": 5, "target": 0 }, 
+					{ "source": 6, "target": 0 },
+				
+					{ "source": 7, "target": 1 },
+					{ "source": 8, "target": 2 },
+					{ "source": 9, "target": 2 },
+					{ "source": 10, "target": 2 },
+					{ "source": 11, "target": 2 },
+					{ "source": 12, "target": 2 },
+					{ "source": 13, "target": 2 },
+					{ "source": 14, "target": 2 },
+					{ "source": 15, "target": 2 },
+					{ "source": 16, "target": 3 },
+					{ "source": 17, "target": 3 },
+					{ "source": 18, "target": 3 },
+					{ "source": 19, "target": 3 },
+					{ "source": 20, "target": 3 },
+					{ "source": 21, "target": 3 },
+					{ "source": 22, "target": 3 },
+					{ "source": 23, "target": 3 },
+					{ "source": 24, "target": 4 },
+					{ "source": 25, "target": 4 },
+					{ "source": 26, "target": 4 },
+					{ "source": 27, "target": 5 },
+					{ "source": 28, "target": 6 },
+				
+					{ "source": 29, "target": 7 },
+					{ "source": 30, "target": 7 },
+					{ "source": 31, "target": 7 },
+					{ "source": 32, "target": 7 },
+					{ "source": 33, "target": 7 },
+					{ "source": 34, "target": 7 },
+				
+					{ "source": 35, "target": 8 },
+				
+					{ "source": 36, "target": 12 },
+				
+					{ "source": 37, "target": 13 },
+				
+					{ "source": 38, "target": 14 },
+				
+					{ "source": 39, "target": 15 },
+				
+					{ "source": 40, "target": 16 },
+					{ "source": 41, "target": 16 },
+				
+					{ "source": 42, "target": 17 },
+					{ "source": 43, "target": 17 },
+					{ "source": 44, "target": 17 },
+				
+					{ "source": 45, "target": 18 },
+					{ "source": 46, "target": 18 },
+				
+					{ "source": 47, "target": 19 },
+					{ "source": 48, "target": 19 },
+					{ "source": 49, "target": 19 },
+				
+					{ "source": 50, "target": 20 },
+					{ "source": 51, "target": 20 },
+				
+					{ "source": 52, "target": 21 },
+					{ "source": 53, "target": 21 },
+					{ "source": 54, "target": 21 },
+				
+					{ "source": 55, "target": 22 },
+					{ "source": 56, "target": 22 },
+					{ "source": 57, "target": 22 },
+				
+					{ "source": 58, "target": 23 },
+					{ "source": 59, "target": 23 },
+					{ "source": 60, "target": 23 },
+					{ "source": 61, "target": 23 },
+				
+					{ "source": 62, "target": 24 },
+				
+					{ "source": 63, "target": 25 },
+				
+					{ "source": 64, "target": 26 },
+				
+					{ "source": 65, "target": 27 },
+					{ "source": 66, "target": 27 },
+					{ "source": 67, "target": 27 },
+					{ "source": 68, "target": 28 },
+					{ "source": 69, "target": 28 },
+					{ "source": 70, "target": 28 }],
+					"categories":[{"name" : "设备"}, {"name" : "相关"}, {"name" : "影响因素"}, {"name" : "建模参数"}]
+			};
+			var options={
+					backgroundColor:"transparent",
+					
+					tooltip: {},
+					legend: [{
+						// selectedMode: 'single',
+						data: params.categories.map(function(a) {
+							return a.name;
+						})
+					}],
+					animation: false,
+					series: [
+						{
+							name: 'Feature',
+							type: 'graph',
+							layout: 'force',
+							data: params.nodes,
+							links: params.links,
+							categories: params.categories,
+							draggable:true,
+							roam: true,
+							label: {
+								normal: {
+									show:true,
+									position: 'bottom'
+								}
+							},
+							itemStyle : {
+							    normal : {
+							    	borderColor : 'rgba(255,215,0,0.8)',
+							        borderWidth : 1.5
+							    }
+							},
+							force: {
+								repulsion: 120
+							}
+						}
+					]
+				};
+
+		        // 使用刚指定的配置项和数据显示图表。
+		        myChart.setOption(options);
+
+		        
+		    </script>
 	
 </body>
 </html>

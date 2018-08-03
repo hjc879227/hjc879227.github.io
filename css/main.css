@@ -565,8 +565,8 @@ nav li:hover {
 }
 
 .gallery {
-	max-width: 800px;
-	margin: 0 auto 90px;
+	max-width: 1000px;
+	margin: 0 auto 0;
 }
 
 .gallery .wrapper, .gallery-hex .wrapper {
