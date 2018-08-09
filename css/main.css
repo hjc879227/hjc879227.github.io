@@ -114,7 +114,7 @@ textarea {
 	}
 }
 
-.works, .works-hex, nav, .blog-excerpts-wrapper {
+.works, .works-hex, nav, .about-me-wrapper {
 	background-color: rgba(0,0,0,0.4);
 }
 
@@ -353,7 +353,7 @@ nav li:hover {
 .about-me {
 	min-width: 280px;
 	max-width: 826px;
-	margin: 37px auto 45px;
+	margin: 0px auto;
 }
 
 .twitter-stream {
@@ -364,8 +364,8 @@ nav li:hover {
 }
 
 .about-me .about {
-	width: 64%;
 	display: inline-block;
+	padding-top: 25px;
 }
 
 .square .about-me .about {
@@ -407,7 +407,7 @@ nav li:hover {
 	min-width: 280px;
 	max-width: 826px;
 	margin: 0 auto;
-	padding: 1px 0 90px;
+	padding: 1px 0 30px;
 }
 
 .blog-categories {
